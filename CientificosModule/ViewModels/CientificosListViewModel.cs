@@ -33,7 +33,7 @@ namespace CientificosModule.ViewModels
             Cientifico cientifico = this.Cientificos.CurrentItem as Cientifico;
             if (cientifico != null)
             {
-                this.eventAggregator.GetEvent<CientificoSeleccionadoEvent>().Publish(cientifico.Id);
+                this.eventAggregator.GetEvent<CientificoSeleccionadoEvent>().Publish(cientifico);
             }
         }
         /*

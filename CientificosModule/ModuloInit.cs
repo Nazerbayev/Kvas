@@ -34,6 +34,7 @@ namespace CientificosModule
             this.container.RegisterType<ISerializador, XmlSerializador>("xml");
 
             this.regionManager.RegisterViewWithRegion(RegionNames.LeftRegion, () => this.container.Resolve<CientificosListView>());
+            this.regionManager.RegisterViewWithRegion(RegionNames.MainRegion, () => this.container.Resolve<CientificosDetailView>());
 
         }
     }

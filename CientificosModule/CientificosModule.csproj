@@ -80,12 +80,16 @@
     <Compile Include="ModuloInit.cs" />
     <Compile Include="Servicios\CientificosDataService.cs" />
     <Compile Include="Servicios\ICientificosDataService.cs" />
+    <Compile Include="ViewModels\CientificosDetailViewModel.cs" />
     <Compile Include="ViewModels\CientificosListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionNames.cs" />
     <Compile Include="Servicios\ISerializador.cs" />
     <Compile Include="Servicios\Serializer.cs" />
     <Compile Include="Servicios\XmlSerializador.cs" />
+    <Compile Include="Views\CientificosDetailView.xaml.cs">
+      <DependentUpon>CientificosDetailView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CientificosListView.xaml.cs">
       <DependentUpon>CientificosListView.xaml</DependentUpon>
     </Compile>
@@ -95,6 +99,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Views\CientificosDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CientificosListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
