@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 
-namespace Kvas.Core.Objetos
+namespace CientificosModule.Core.Objetos
 {
-
-    [Serializable]
-    public class Persona
+    public class Cientifico
     {
+        public String Id { get; set; }
         public String Nombre { get; set; }
-        public String Imagen { get; set; }
+        public String Apellido { get; set; }
         public String Merito { get; set; }
     }
 }

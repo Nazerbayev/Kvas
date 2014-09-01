@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>mahapps.metro.logo2.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -111,11 +112,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\Objetos\Persona.cs" />
     <Compile Include="Core\Prism\Bootstraper\KvasBootstrapper.cs" />
-    <Compile Include="Core\Utilidades\ISerializador.cs" />
-    <Compile Include="Core\Utilidades\Serializer.cs" />
-    <Compile Include="Core\Utilidades\XmlSerializador.cs" />
     <Compile Include="Views\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -162,9 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="skull.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="mahapps.metro.logo2.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\bskulls.gif" />

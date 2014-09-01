@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Kvas.Core.Utilidades
+namespace CientificosModule.Servicios
 {
     public class XmlSerializador : ISerializador
     {
-        public static void SerializeObject<T>(String archivo, T objeto)
+        public void SerializeObject<T>(String archivo, T objeto)
         {
             XmlSerializer xmls = new XmlSerializer(typeof(T));
             using (StreamWriter sw = new StreamWriter(archivo))
@@ -18,7 +18,7 @@ namespace Kvas.Core.Utilidades
                 xmls.Serialize(sw, objeto);
             }
         }
-        public static T DeserializeObject<T>(String archivo)
+        public T DeserializeObject<T>(String archivo)
         {
             T objeto = default(T);
             XmlSerializer xmls = new XmlSerializer(typeof(T));

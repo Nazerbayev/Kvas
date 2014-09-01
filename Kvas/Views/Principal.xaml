@@ -68,8 +68,8 @@
                     <TranslateTransform />
                 </TransformGroup>
             </Canvas.RenderTransform>
-            <TextBlock Canvas.Top="10" Canvas.Left="15" Text="Kvas " TextWrapping="NoWrap" Foreground="#FFBBD3EF" FontSize="48" Opacity="0.7" TextAlignment="Left" FontWeight="Bold" />
-            <TextBlock Canvas.Top="15" Canvas.Left="210" Text="Prueba de Impresión" TextWrapping="NoWrap" Foreground="#FFC8D5DE" FontSize="40" Opacity="0.85" TextAlignment="Left" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
+            <TextBlock Canvas.Top="10" Canvas.Left="15" Text="Kvas " TextWrapping="NoWrap" Foreground="#FFBBD3EF" FontSize="48"  TextAlignment="Left" FontWeight="Bold" />
+            <TextBlock Canvas.Top="15" Canvas.Left="210" Text="Prueba de Impresión" TextWrapping="NoWrap" Foreground="#FFC8D5DE" FontSize="40"  TextAlignment="Left" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="1.25" ScaleY="1.25" />
@@ -82,12 +82,12 @@
         </Canvas>
 
         <!-- Left Region -->
-        <Border Grid.Row="1" BorderBrush="#FF4355C1" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" Margin="8,2,2,8">
+        <Border Grid.Row="1" BorderBrush="#FFDDDDDD" BorderThickness="1" Margin="8,2,2,8">
             <ContentControl x:Name="LeftRegion" regions:RegionManager.RegionName="LeftRegion" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" />
         </Border>
 
         <!-- Main Region -->
-        <Border Margin="2,2,8,8" Grid.Column="2" Grid.Row="1" BorderThickness="2,2,2,2" CornerRadius="4,4,4,4" BorderBrush="#FF4355C1" Grid.RowSpan="2">
+        <Border Margin="2,2,8,8" Grid.Column="2" Grid.Row="1" BorderThickness="1"  BorderBrush="#FFDDDDDD" Grid.RowSpan="2">
             <ContentControl x:Name="MainRegion" regions:RegionManager.RegionName="MainRegion" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" />
         </Border>
 

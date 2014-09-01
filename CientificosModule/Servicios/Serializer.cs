@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kvas.Core.Utilidades
+namespace CientificosModule.Servicios
 {
     /// <summary>
     /// Clase Utilitaria para guardar objetos en archivos de texto
@@ -19,7 +19,7 @@ namespace Kvas.Core.Utilidades
         /// <typeparam name="T"></typeparam>
         /// <param name="archivo"></param>
         /// <param name="objeto"></param>
-        public static void SerializeObject<T>(String archivo, T objeto)
+        public void SerializeObject<T>(String archivo, T objeto)
         {
             using (Stream stream = File.Open(archivo, FileMode.Create))
             {
@@ -34,7 +34,7 @@ namespace Kvas.Core.Utilidades
         /// <typeparam name="T"></typeparam>
         /// <param name="archivo"></param>
         /// <returns></returns>
-        public static T DeserializeObject<T>(String archivo)
+        public T DeserializeObject<T>(String archivo)
         {
             T objeto = default(T);
             using (Stream stream = File.Open(archivo, FileMode.Open))

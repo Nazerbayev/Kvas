@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Kvas.Views;
 
 namespace Kvas.Core.Prism.Bootstraper
 {
@@ -32,7 +33,7 @@ namespace Kvas.Core.Prism.Bootstraper
             base.ConfigureModuleCatalog();
 
             ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
-            moduleCatalog.AddModule(typeof(CientificosModule.Initializer));
+            moduleCatalog.AddModule(typeof(CientificosModule.ModuloInit));
         }
     }
 }

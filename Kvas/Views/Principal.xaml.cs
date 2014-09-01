@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Kvas.Core.Objetos;
 using MahApps.Metro.Controls;
 
 namespace Kvas.Views
@@ -25,21 +24,8 @@ namespace Kvas.Views
         public Principal()
         {
             InitializeComponent();
-            ProbandoItemsDummy();
         }
-        private void ProbandoItemsDummy()
-        {
-            List<Persona> personas = new List<Persona>();
-            personas.Add(new Persona() { Nombre = "Alfred R. Wallace",      Imagen = "/Resources/a.png", Merito = "Descubrió la Evolución por Selección Natural" });
-            personas.Add(new Persona() { Nombre = "Gregor Mendel",          Imagen = "/Resources/g.png", Merito = "Fundador de la Genética" });
-            personas.Add(new Persona() { Nombre = "Albert Einstein",        Imagen = "/Resources/a.png", Merito = "Preparaba un café bien sabroso" });
-            personas.Add(new Persona() { Nombre = "Nikola Tesla",           Imagen = "/Resources/n.png", Merito = "Descubrió la Energía Alterna (AC)" });
-            personas.Add(new Persona() { Nombre = "James Watt",             Imagen = "/Resources/j.png", Merito = "Padre de la revolución Industrial" });
-            personas.Add(new Persona() { Nombre = "Stephanie Kwolek",       Imagen = "/Resources/s.png", Merito = "Inventó el Kevlar" });
-            personas.Add(new Persona() { Nombre = "James Clerk Maxwell",    Imagen = "/Resources/j.png", Merito = "Unificó Magnetismo, Luz y Electricidad" });
-            lbPersonas.ItemsSource = personas;
-        }
-
+        /*
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.ToggleFlyout(0);
@@ -55,5 +41,6 @@ namespace Kvas.Views
 
             flyout.IsOpen = !flyout.IsOpen;
         }
+         * */
     }
 }
