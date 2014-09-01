@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using Kvas.Core.Objetos;
 using MahApps.Metro.Controls;
 
-namespace Kvas
+namespace Kvas.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -103,7 +103,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Principal.xaml">
+    <Page Include="Views\Principal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -116,7 +116,7 @@
     <Compile Include="Core\Utilidades\ISerializador.cs" />
     <Compile Include="Core\Utilidades\Serializer.cs" />
     <Compile Include="Core\Utilidades\XmlSerializador.cs" />
-    <Compile Include="Principal.xaml.cs">
+    <Compile Include="Views\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -249,6 +249,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CientificosModule\CientificosModule.csproj">
+      <Project>{539d2fa4-e0f8-4328-bdd3-04e165216f97}</Project>
+      <Name>CientificosModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
