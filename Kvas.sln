@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kvas", "Kvas\Kvas.csproj", "{8EAC529D-DA9A-42EA-8B0B-FED403B7CBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CientificosModule", "CientificosModule\CientificosModule.csproj", "{539D2FA4-E0F8-4328-BDD3-04E165216F97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{8EAC529D-DA9A-42EA-8B0B-FED403B7CBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EAC529D-DA9A-42EA-8B0B-FED403B7CBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EAC529D-DA9A-42EA-8B0B-FED403B7CBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539D2FA4-E0F8-4328-BDD3-04E165216F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539D2FA4-E0F8-4328-BDD3-04E165216F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539D2FA4-E0F8-4328-BDD3-04E165216F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539D2FA4-E0F8-4328-BDD3-04E165216F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

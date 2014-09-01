@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kvas.Core.Prism.Bootstraper;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,12 @@ namespace Kvas
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            KvasBootstrapper btsr = new KvasBootstrapper();
+            btsr.Run();
+        }
+        
     }
 }
