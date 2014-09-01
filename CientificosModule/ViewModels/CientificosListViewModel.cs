@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
+using System.Windows.Input;
 using CientificosModule.Core.Objetos;
 using CientificosModule.Eventos;
 using CientificosModule.Servicios;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.PubSubEvents;
 
 namespace CientificosModule.ViewModels
@@ -16,6 +18,8 @@ namespace CientificosModule.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private readonly IEventAggregator eventAggregator;
+        public ICommand SendMessage { get; set; }
+        public ICollectionView Cientificos { get; private set; }
 
         public CientificosListViewModel(ICientificosDataService dataService, IEventAggregator eventAggregator)
         {
@@ -25,8 +29,19 @@ namespace CientificosModule.ViewModels
 
             this.Cientificos = new ListCollectionView(dataService.obtenerCientificos());
             this.Cientificos.CurrentChanged += new EventHandler(this.SeleccionCientificoChanged);
+
+            SendMessage = new DelegateCommand<String>(SendMessageExecute, SendMessageCanExecute);
         }
-        public ICollectionView Cientificos { get; private set; }
+
+        private void SendMessageExecute(String argumento)
+        {
+        }
+        private bool SendMessageCanExecute(String argumento)
+        {
+            return true;
+        }
+
+
 
         private void SeleccionCientificoChanged(object sender, EventArgs e)
         {

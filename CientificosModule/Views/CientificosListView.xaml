@@ -29,6 +29,6 @@
                 <DataGridTextColumn Header="Apellido" Binding="{Binding Path=Apellido}" IsReadOnly="True" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
-
+        <Button Grid.Row="2" Grid.Column="1" Content="Exportar" Command="{Binding SendMessage}" CommandParameter="Hola"/>
     </Grid>
 </UserControl>
