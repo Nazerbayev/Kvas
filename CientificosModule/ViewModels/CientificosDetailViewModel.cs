@@ -15,8 +15,8 @@ namespace CientificosModule.ViewModels
     {
         private IUnityContainer container;
         private readonly IEventAggregator eventAggregator;
-        public Cientifico Seleccionado;
-        public String Pepe = "Original";
+        public Cientifico Seleccionado { get; set; }
+
         public CientificosDetailViewModel(IUnityContainer container, IEventAggregator eventAggregator)
         {
             if (container == null) throw new ArgumentNullException("Falta el container");
@@ -30,8 +30,7 @@ namespace CientificosModule.ViewModels
         {
             if (persona == null) return;
             this.Seleccionado = persona;
-            this.Pepe = "Nuevo";
-
+            this.NotifyPropertyChanged("Seleccionado");
         }
 
 

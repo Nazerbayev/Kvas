@@ -17,8 +17,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!--<TextBlock Grid.Row="0" Text="Detalle del Cientifico Seleccionado" TextWrapping="Wrap" FontSize="18" Foreground="#FF2F3806" Margin="8" />-->
-        <TextBlock Grid.Row="0" Text="{Binding Path=Pepe}" TextWrapping="Wrap" FontSize="18" Foreground="#FF2F3806" Margin="8" />
+        <TextBlock Grid.Row="0" Text="Detalle del Cientifico Seleccionado" TextWrapping="Wrap" FontSize="18" Foreground="#FF2F3806" Margin="8" />
 
         <Grid Grid.Row="1" Grid.Column="0" Width="Auto" Height="Auto" Margin="8">
             <Grid.ColumnDefinitions>
