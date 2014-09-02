@@ -84,6 +84,9 @@
     <Compile Include="Core\Objetos\Cientifico.cs" />
     <Compile Include="Core\Objetos\Cientificos.cs" />
     <Compile Include="Eventos\CientificoSeleccionadoEvent.cs" />
+    <Compile Include="Eventos\FlyOutEvent.cs" />
+    <Compile Include="Eventos\MessageDialogEvent.cs" />
+    <Compile Include="Eventos\MessageDialogEventArgs.cs" />
     <Compile Include="ModuloInit.cs" />
     <Compile Include="Servicios\CientificosDataService.cs" />
     <Compile Include="Servicios\ICientificosDataService.cs" />

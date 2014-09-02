@@ -29,9 +29,6 @@ namespace CientificosModule
             //Registramos el DataService
             this.container.RegisterType<ICientificosDataService, CientificosDataService>();
 
-            //Registramos las clases utilitarias
-            this.container.RegisterType<ISerializador, Serializer>("binario");
-            this.container.RegisterType<ISerializador, XmlSerializador>("xml");
 
             this.regionManager.RegisterViewWithRegion(RegionNames.LeftRegion, () => this.container.Resolve<CientificosListView>());
             this.regionManager.RegisterViewWithRegion(RegionNames.MainRegion, () => this.container.Resolve<CientificosDetailView>());

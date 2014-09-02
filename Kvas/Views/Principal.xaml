@@ -5,12 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:regions="http://www.codeplex.com/CompositeWPF"
-        ShowIconOnTitleBar="True"
-        ShowTitleBar="True"
-        
+        ShowWindowCommandsOnTop="False"
         WindowStartupLocation="CenterScreen"
         GlowBrush="{DynamicResource AccentColorBrush}"
-        Icon="../skull.ico"
+        Icon="../decision.ico"
         Title="Kvas" Height="600" Width="800" >
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
@@ -33,13 +31,15 @@
     </Controls:MetroWindow.RightWindowCommands>
     <Controls:MetroWindow.Flyouts>
         <Controls:FlyoutsControl>
-            <Controls:Flyout Header="New Goodness"
+            <Controls:Flyout Header="Exportar Cientificos..."
                                  Position="Right"
-                                 Width="{Binding ElementName=settingsFlyout, Path=ActualWidth, Mode=OneWay}">
+                                 Width="{Binding ElementName=settingsFlyout, Path=ActualWidth, Mode=OneWay}"
+                             IsOpen="{Binding Path=FlyOutDesplegado}">
                 <StackPanel Orientation="Vertical"
                                 Margin="10">
-                    <Button Content="create" />
-                    <Button Content="cancel" />
+                    
+                    <TextBox Text="" />
+                    <Button Content="Exportar" />
                 </StackPanel>
             </Controls:Flyout>
         </Controls:FlyoutsControl>

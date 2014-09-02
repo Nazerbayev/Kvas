@@ -13,34 +13,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using Kvas.ViewModels;
+using Kvas.Core;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace Kvas.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Principal
+    public partial class Principal : MetroWindow
     {
-        public Principal()
+        public Principal(PrincipalViewModel model)
         {
             InitializeComponent();
-        }
-        /*
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.ToggleFlyout(0);
-            
-        }
-        private void ToggleFlyout(int index)
-        {
-            var flyout = this.Flyouts.Items[index] as Flyout;
-            if (flyout == null)
-            {
-                return;
-            }
+            this.DataContext = model;
 
-            flyout.IsOpen = !flyout.IsOpen;
+            //No es lo ideal pero es la mejor forma de ejecutar un metodo de MetroWindow desde el ViewModel y conservar la separacion de intereses
+            model.MostrarDialogo += MostrarMensaje;
         }
-         * */
+        private async void MostrarMensaje(String titulo, String mensaje)
+        {
+            await this.ShowMessageAsync(titulo, mensaje);
+        }
     }
 }
