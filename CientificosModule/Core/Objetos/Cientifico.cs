@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CientificosModule.Core.Objetos
 {
+    [Serializable]
     public class Cientifico
     {
         public String Id { get; set; }

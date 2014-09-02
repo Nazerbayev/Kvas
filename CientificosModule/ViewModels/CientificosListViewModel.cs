@@ -48,7 +48,7 @@ namespace CientificosModule.ViewModels
         private void SendMessageExecute(String argumento)
         {
 
-            var serializador = container.Resolve<XmlSerializador>();
+            var serializador = container.Resolve<ISerializador>();
             if (serializador == null) throw new Exception("Error con el DI");
             serializador.SerializeObject<Cientificos>("salida.xml", _listado);
             
@@ -69,21 +69,6 @@ namespace CientificosModule.ViewModels
                 this.eventAggregator.GetEvent<CientificoSeleccionadoEvent>().Publish(cientifico);
             }
         }
-        /*
-        private void ProbandoItemsDummy()
-        {
-            List<Persona> personas = new List<Persona>();
-            personas.Add(new Persona() { Nombre = "Alfred R. Wallace",      Imagen = "/Resources/a.png", Merito = "Descubrió la Evolución por Selección Natural" });
-            personas.Add(new Persona() { Nombre = "Gregor Mendel",          Imagen = "/Resources/g.png", Merito = "Fundador de la Genética" });
-            personas.Add(new Persona() { Nombre = "Albert Einstein",        Imagen = "/Resources/a.png", Merito = "Preparaba un café bien sabroso" });
-            personas.Add(new Persona() { Nombre = "Nikola Tesla",           Imagen = "/Resources/n.png", Merito = "Descubrió la Energía Alterna (AC)" });
-            personas.Add(new Persona() { Nombre = "James Watt",             Imagen = "/Resources/j.png", Merito = "Padre de la revolución Industrial" });
-            personas.Add(new Persona() { Nombre = "Stephanie Kwolek",       Imagen = "/Resources/s.png", Merito = "Inventó el Kevlar" });
-            personas.Add(new Persona() { Nombre = "James Clerk Maxwell",    Imagen = "/Resources/j.png", Merito = "Unificó Magnetismo, Luz y Electricidad" });
-            //lbPersonas.ItemsSource = personas;
-        }
-        */
-
 
         #region PropertyChanged Events
 
